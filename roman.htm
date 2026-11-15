@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<title>RoMan Decimals</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+body {background-color: black; 
+color: green;
+font-size: 14; }
+.style1 {
+	font-size: 40px;
+	font-family: Papyrus;
+}
+ .style2 {font-family: Papyrus}
+.style4 {color: #FFFF00; font-weight: bold; }
+.style3 {color: #0000FF}
+</style>
+<head>
+<script language="javascript">
+function Changer(){
+if(document.myform.tupac[0].checked) {
+var num = parseInt(document.myform.numin.value)
+var ans = "";
+var m = Math.floor(num/1000);
+num = num - (m*1000);
+var d = Math.floor(num/500);
+num = num - (d*500);
+var c = Math.floor(num/100);
+num = num - (c*100);
+var L = Math.floor(num/50);
+num = num - (L*50);
+var x = Math.floor(num/10);
+num = num - (x*10);
+var v = Math.floor(num/5);
+num = num - (v*5);
+var i = Math.floor(num/1);
+for(j=1;j<=m;j++) {ans += "M";}
+
+if(d == 1 && c == 4) {ans +="CM"; c = 0;}
+else if(d==1)  {ans += "D";}
+if(c==4) {ans+="CD"}
+for(j=1;j<=c;j++) {ans +="C"}
+
+if(L == 1 && x == 4) {ans +="XC"; x = 0;}
+else if(L==1)  {ans += "L";}
+if(x==4) {ans+="XL"}
+for(j=1;j<=x;j++) {ans +="X"}
+
+if(v == 1 && i == 4) {ans +="IX"; c = 0;}
+else if(v==1)  {ans += "V";}
+if(c==4) {ans+="IV"}
+for(j=1;j<=i;j++) {ans +="I"}
+
+document.myform.numout.value = ans
+	}
+else { 
+var romnum = document.myform.numin.value;
+var len = romnum.length;
+var total = 0;
+var now = ""; 
+var next = "";
+for(i=0;i<len;i++) { 
+	now = romnum.charAt(i).toUpperCase();
+	next = romnum.charAt(i+1).toUpperCase();
+switch(now) {
+case "M": total+=1000; break; 
+case "D": total+=500; break;
+case "L": total+= 50; break;
+case "V": total+=5; break;
+case "C": if(next=="M") {total+=900; i++;} 
+		else if(next=="D") {total+=400; i++;}
+		else total +=100; break;
+case "X": total+=10; break;
+		if(next=="C") {total+=900; i++;} 
+		else if(next=="L") {total+=400; i++;}
+		else total +=100; break;
+case "I": total+=1; break;
+		if(next=="X") {total+=900; i++;} 
+		else if(next=="V") {total+=400; i++;}
+		else total +=100; break;
+	}
+	}
+document.myform.numout.value = total;
+}
+}
+
+</script>
+
+</head>
+<body>
+<p align="center" class="style2 style1">RoMan Decimals</p>
+<p align="center">
+  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="147" height="34">
+    <param name="movie" value="button6.swf">
+    <param name="quality" value="high">
+    <param name="bgcolor" value="#000000">
+    <embed src="button6.swf" quality="high" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="147" height="34" bgcolor="#000000"></embed>
+  </object>
+  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="147" height="34">
+    <param name="BGCOLOR" value="#000000">
+    <param name="movie" value="button2.swf">
+    <param name="quality" value="high">
+    <embed src="button2.swf" width="147" height="34" quality="high" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" bgcolor="#000000" ></embed>
+  </object>
+  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="147" height="34">
+    <param name="movie" value="button3.swf">
+    <param name="quality" value="high">
+    <param name="bgcolor" value="#000000">
+    <embed src="button3.swf" quality="high" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="147" height="34" bgcolor="#000000"></embed>
+  </object>
+  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="147" height="34">
+    <param name="movie" value="button4.swf">
+    <param name="quality" value="high">
+    <param name="bgcolor" value="#000000">
+    <embed src="button4.swf" quality="high" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="147" height="34" bgcolor="#000000"></embed>
+  </object>
+</p>
+<form name="myform">
+  <p align="center">&nbsp;&nbsp;<span class="style2">
+    <input name="button" type="button" value="Converse" onClick="Changer()" >
+  </span>&nbsp;<strong>&nbsp;&nbsp;&nbsp;&nbsp;</strong></p>
+  <p align="center"><span class="style3"><strong>&nbsp; <span class="style2">Decimal to Roman</span></strong> <span class="style2">
+    <input type="radio" name="tupac" "decimal to roman" checked>
+    <input type="text" name="numin" size="15">
+    <strong>Input&nbsp;</strong> &nbsp;<strong>&nbsp;&nbsp;&nbsp;</strong></span></span></p>
+  <p align="center" class="style2"><span class="style3"><strong>Roman to Decimal</strong>
+        <input type="radio" name="tupac"  "roman to decimal">
+        <input type="text" name="numout" size="15" disabled>
+        <strong>Output</strong> <strong>&nbsp;</strong></span></p>
+  <p align="center"> <span class="style2"><font color="#666666" size="6">Index:</font></span></p>
+  <div align="center">
+    <table width="475" border="7">
+      <tr>
+        <td width="148" bgcolor="#CCCCCC"><div align="center"><strong>Fahrenheit</strong></div></td>
+        <td width="299" bgcolor="Black"><div align="center"><span class="style4">Change Fahrenheit to Celcius </span></div></td>
+      </tr>
+      <tr>
+        <td bgcolor="#CCCCCC"><div align="center"><strong>Meter Changer </strong></div></td>
+        <td bgcolor="Black"><div align="center"><span class="style4">Change Meters to Miles</span></div></td>
+      </tr>
+      <tr>
+        <td bgcolor="#CCCCCC"><div align="center"><strong>Feeto Meet Hers </strong></div></td>
+        <td bgcolor="Black"><div align="center"><span class="style4">Change Feet to Meters </span></div></td>
+      </tr>
+      <tr>
+        <td bgcolor="#CCCCCC"><div align="center"><strong>RoMan Decimals </strong></div></td>
+        <td bgcolor="Black"><div align="center"><span class="style4">Change Decimals to Roman Numerals </span></div></td>
+      </tr>
+    </table>
+  </div>
+  <p align="center">
+    <script language="javascript">
+document.myform.numin.select();
+document.myform.numin.focus();
+    </script>
+    <embed src="roman.wav" width="0" height="0"></embed>
+  </p>
+</form>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<title>Fahrenheit</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+ <style type="text/css">
+body{background-color: black; 
+color: blue;
+font-size: 14; }
+.style1 {
+	font-size: 50px;
+	font-family: Papyrus;
+}
+ .style2 {font-family: Papyrus}
+.style4 {color: #FFFF00; font-weight: bold; }
+ </style>
+<head>
+<script language="Javascript">
+function ftoc() {
+var f= parseInt(document.myform.textout.value)
+var c= (f-32)/9*5
+document.myform.textin.value = c
+}
+function ctof() {
+c = parseInt(document.myform.textin.value)
+f = (c/5*9)+32;
+document.myform.textout.value = f
+}
+
+</script>
+</head>
+<center>
+<body>
+<p class="style3 style4 style1">FahrenHeit</p>
+<div align="center">
+  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="147" height="34">
+    <param name="movie" value="button6.swf">
+    <param name="quality" value="high">
+    <param name="bgcolor" value="#000000">
+    <embed src="button6.swf" quality="high" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="147" height="34" bgcolor="#000000"></embed>
+  </object>
+  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="147" height="34">
+    <param name="movie" value="button3.swf">
+    <param name="quality" value="high">
+    <param name="bgcolor" value="#000000">
+    <embed src="button3.swf" quality="high" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="147" height="34" bgcolor="#000000"></embed>
+  </object>
+  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="147" height="34">
+    <param name="movie" value="button4.swf">
+    <param name="quality" value="high">
+    <param name="bgcolor" value="#000000">
+    <embed src="button4.swf" quality="high" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="147" height="34" bgcolor="#000000"></embed>
+  </object>
+  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="147" height="34">
+    <param name="movie" value="button5.swf">
+    <param name="quality" value="high">
+    <param name="bgcolor" value="#000000">
+    <embed src="button5.swf" quality="high" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="147" height="34" bgcolor="#000000"></embed>
+  </object>
+</div>
+<form name="myform">
+  <p align="center">
+    <input type="button" name="Submit" value="Convert To Fahrenheit" onClick="ctof()">
+    <input type="text" name="textin" size="5">
+    <span class="style2"><sup>o</sup> Celcius </span></p>
+  <p align="center">
+    <input type="button" name="Submit2" value="Convert to Celcius" onClick="ftoc()">
+    <input type="text" name="textout" size="5">
+    <span class="style2"><sup>o</sup> Fahrenheit </span></p>
+</form>
+<p align="center"><span class="style2"><font color="#666666" size="6">Index:</font></span></p>
+<table width="475" border="7">
+  <tr>
+    <td width="148" bgcolor="#CCCCCC"><div align="center"><strong>Fahrenheit</strong></div></td>
+    <td width="299" bgcolor="Black"><div align="center"><span class="style4">Change Fahrenheit to Celcius </span></div></td>
+  </tr>
+  <tr>
+    <td bgcolor="#CCCCCC"><div align="center"><strong>Meter Changer </strong></div></td>
+    <td bgcolor="Black"><div align="center"><span class="style4">Change Meters to Miles</span></div></td>
+  </tr>
+  <tr>
+    <td bgcolor="#CCCCCC"><div align="center"><strong>Feeto Meet Hers </strong></div></td>
+    <td bgcolor="Black"><div align="center"><span class="style4">Change Feet to Meters </span></div></td>
+  </tr>
+  <tr>
+    <td bgcolor="#CCCCCC"><div align="center"><strong>RoMan Decimals </strong></div></td>
+    <td bgcolor="Black"><div align="center"><span class="style4">Change Decimals to Roman Numerals </span></div></td>
+  </tr>
+</table>
+<p align="center">
+  <embed src="Farinheight.wav" width="0" height="0"></embed>
+</p>
+</body>
+</center>
+</html>
